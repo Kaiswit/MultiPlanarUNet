@@ -47,10 +47,10 @@ def get_argparser():
     parser.add_argument("--wait_for", type=str, default="",
                         help="Wait for PID to terminate before starting the "
                              "training process.")
-    parser.add_argument("--train_images_per_epoch", type=int, default=2500,
+    parser.add_argument("--train_images_per_epoch", type=int, default=14,
                         help="Number of training images to sample in each "
                              "epoch")
-    parser.add_argument("--val_images_per_epoch", type=int, default=3500,
+    parser.add_argument("--val_images_per_epoch", type=int, default=3,
                         help="Number of training images to sample in each "
                              "epoch")
     parser.add_argument("--max_loaded_images", type=int, default=None,
@@ -58,7 +58,7 @@ def get_argparser():
                              "keep loaded in memory at a given time. Images "
                              "will be cycled every '--num_access slices.'. "
                              "Default=None (all loaded).")
-    parser.add_argument("--epochs", type=int, default=None,
+    parser.add_argument("--epochs", type=int, default=100,
                         help="Overwrite the number of epochs as specified in "
                              "the hyperparameters file")
     parser.add_argument("--num_access", type=int, default=50,
